@@ -1,0 +1,129 @@
+<FileSelection>:
+    BoxLayout:
+        orientation: 'vertical'
+        BoxLayout:
+            orientation: 'horizontal'
+            size_hint_y: None
+            height: sp(52)
+            BoxLayout:
+                orientation: 'vertical'
+                BoxLayout:
+                    size_hint_y: 0.1
+                    Button:
+                        id: imSelect
+                        text: 'Select Image Directory'
+                        on_press: root.getDir()         
+                    Button:
+                        id: sounSelect
+                        text: 'Select Sound File'
+                        on_press: root.getFile()
+                BoxLayout:
+                    size_hint_y: 0.1
+                    TextInput:
+                        id: text_input_directory
+                        readonly: True
+                        size_hint_y: None
+                        height: '30dp'
+                        multiline: False
+                    TextInput:
+                        id: text_input_file
+                        readonly: True
+                        size_hint_y: None
+                        height: '30dp'
+                        multiline: False
+            Button:
+                id: load
+                size_hint_x: 0.1
+                text: "Load"
+                background_color: 1, 0 , 0 ,1
+                on_press: root.load()
+        FileChooser:
+            id: fc
+            #view_mode : 'icon'
+            #filters: ['*.png']
+            #on_submit: root.select(self, imSelect.state,sounSelect.state)
+            FileChooserIconLayout:
+                dirselect : True                
+ 
+<CarouselViewer>:
+    Carousel:
+        id : imviewer
+        direction: 'right'
+
+
+<Player>:
+    orientation: 'vertical'
+    BoxLayout:
+        orientation: 'vertical'
+        CarouselViewer:
+            id: caro
+        Slider:
+            id : slide
+            size_hint: 1, 0.1 
+            orientation: 'horizontal'
+            height: '48dp'   
+            value_track: 'True'
+            value_track_color:0, 0.9, 1, 1
+            max: 100
+            value: root.progressBarValue
+            on_value: root.changeSoundPos(slide.value)
+            
+        BoxLayout:
+            size_hint: 1, 0.1 
+            orientation:"horizontal"
+            Button:
+                id: test
+                size_hint: 0.1 , 1 
+                text: "play"
+                on_press : root.playButton()
+            Button:
+                size_hint: 0.1 , 1             
+                text: "Prev"
+                on_press : root.prevSection()
+            Button:
+                size_hint: 0.1 , 1 
+                text: "Next"
+                on_press : root.nextSection()
+            BoxLayout:
+                orientation:"vertical"
+                size_hint:  0.17 , 1
+                Slider:
+                    id : volume
+                    orientation: 'horizontal'
+                    height: '48dp'   
+                    value_track: 'True'
+                    value_track_color:0, 0.9, 1, 1
+                    max: 1
+                    value: 0.5
+                    on_value: root.changeSoundValue(volume.value)
+                Label:
+                    text: "Volume"
+
+            Button:
+                size_hint: 0.1 , 1 
+                text: "..."
+                on_press:  root.filemanager()
+
+            Widget:
+                size_hint: 0.03 , 1
+
+            Button:
+                size_hint: 0.1 , 1             
+                text: "<"
+                on_press: root.prevIm() 
+            BoxLayout:
+                size_hint: 0.1 , 1
+                orientation:"vertical"
+                Switch:
+                    id: syncSwitch
+                    active_norm_pos: 1
+                    on_active: root.switchToggle(self.active)
+                    height: '48dp'
+                Label:
+                    text: "Sync"
+            Button:
+                size_hint: 0.1 , 1 
+                text: ">"
+                on_press: root.nextIm() 
+           
+           
