@@ -16,9 +16,9 @@ This project aims to help anyone that can not take notes in the conventional han
 
 <p>
 
-![ImageEx](imgs/1.PNG?raw=true "")
+![ImageEx](/1.PNG?raw=true "")
 
-![ImageEx](imgs/2.PNG?raw=true "")
+![ImageEx](/2.PNG?raw=true "")
 
   <strong style="color: #000;">Features: </strong>
 1.Play/Stop: will play the audio with the synced pictures (if sync is not on it will only play the audio)   
