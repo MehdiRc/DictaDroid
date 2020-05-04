@@ -30,3 +30,17 @@ This project aims to help anyone that can not take notes in the conventional han
 7. picture display area, you can swipe left or right to display the previous or next pictures   without changing the audio (this action will set the sync to Off)  
 
 </p>
+
+<hr>
+
+<p>
+
+![ImageEx](/1.PNG?raw=true "")
+
+![ImageEx](/2.PNG?raw=true "")
+
+  <strong style="color: #000;">Use: </strong>
+You can record the audio with _any_ recording device as long as you take a reference picture at the time your start your recording (this initial picture will serve as a sync ancor) 
+
+
+</p>
