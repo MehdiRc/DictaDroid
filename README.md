@@ -16,9 +16,7 @@ This project aims to help anyone that can not take notes in the conventional han
 
 <p>
 
-![ImageEx](/1.PNG?raw=true "")
-
-![ImageEx](/2.PNG?raw=true "")
+![ImageEx](/1.PNG?raw=true "")  ![ImageEx](/2.PNG?raw=true "")
 
   <strong style="color: #000;">Features: </strong>
 1.Play/Stop: will play the audio with the synced pictures (if sync is not on it will only play the audio)   
@@ -34,10 +32,6 @@ This project aims to help anyone that can not take notes in the conventional han
 <hr>
 
 <p>
-
-![ImageEx](/1.PNG?raw=true "")
-
-![ImageEx](/2.PNG?raw=true "")
 
   <strong style="color: #000;">Use: </strong>
 You can record the audio with _any_ recording device as long as you take a reference picture at the time your start your recording (this initial picture will serve as a sync ancor) 
